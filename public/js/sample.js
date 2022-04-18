@@ -2,7 +2,7 @@ $(function() {
 
     $.ajax({
         type: "GET",
-        url: "/countries/"
+        url: "countries/"
     }).done(function(countries) {
 
         countries.unshift({ id: "0", name: "" });
@@ -23,28 +23,28 @@ $(function() {
                 loadData: function(filter) {
                     return $.ajax({
                         type: "GET",
-                        url: "/clients/",
+                        url: "clients/",
                         data: filter
                     });
                 },
                 insertItem: function(item) {
                     return $.ajax({
                         type: "POST",
-                        url: "/clients/",
+                        url: "clients/",
                         data: item
                     });
                 },
                 updateItem: function(item) {
                     return $.ajax({
                         type: "PUT",
-                        url: "/clients/",
+                        url: "clients/",
                         data: item
                     });
                 },
                 deleteItem: function(item) {
                     return $.ajax({
                         type: "DELETE",
-                        url: "/clients/",
+                        url: "clients/",
                         data: item
                     });
                 }
